@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  VKServicesViewController.swift
 //  VKServicesApp
 //
 //  Created by mac on 14.07.2022.
@@ -7,53 +7,46 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class VKServicesViewController: UIViewController {
 
+    var output: VKServicesViewOutput?
+    var serviceData = [Service]()
     let table = UITableView()
     let identifier = "MyCell"
-    let exampleUrl = URL(string: "https://publicstorage.hb.bizmrg.com/sirius/result.json")!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Сервисы VK"
         table.rowHeight = 64
         table.frame = view.frame
-        table.register(CustomTableViewCell.self, forCellReuseIdentifier: identifier)
+        table.register(VKServicesTableViewCell.self, forCellReuseIdentifier: identifier)
         table.reloadData()
         table.dataSource = self
         table.delegate = self
         view.addSubview(table)
+        output?.viewLoaded()
     }
 }
 
-extension ViewController: UITableViewDelegate {
+extension VKServicesViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? CustomTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? VKServicesTableViewCell else {
             return UITableViewCell()
         }
-        do {
-            let jsonData = try Data(contentsOf: exampleUrl)
-            let result = try JSONDecoder().decode(Object.self, from: jsonData)
-            print(result)
-            cell.titleLabel.text = "\(result.body.services[indexPath.row].name)"
-            cell.subtitleLabel.text = "\(result.body.services[indexPath.row].description)"
-            cell.iconImageView.setCustomImage(result.body.services[indexPath.row].icon_url)
-
-//            func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//                UIApplication.shared.openURL(result.body.services[indexPath.row].link)
-//            }
-        } catch {
-            print(error)
-        }
+        cell.configure(with: serviceData[indexPath.row])
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        UIApplication.shared.openURL(serviceData[indexPath.row].link)
     }
 }
 
-extension ViewController: UITableViewDataSource {
+extension VKServicesViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        9
+        serviceData.count
     }
 }
 
@@ -70,5 +63,13 @@ extension UIImageView {
                 self?.image = data != nil ? UIImage(data: data!) : UIImage(named: "default.png")
             }
         }
+    }
+}
+
+extension VKServicesViewController: VKServicesViewInput {
+
+    func setupData(with data: [Service]) {
+        serviceData = data
+        table.reloadData()
     }
 }

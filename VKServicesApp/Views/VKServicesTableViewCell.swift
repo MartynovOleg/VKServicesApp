@@ -1,5 +1,5 @@
 //
-//  CustomTableViewCell.swift
+//  VKServicesTableViewCell.swift
 //  VKServicesApp
 //
 //  Created by mac on 14.07.2022.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CustomTableViewCell: UITableViewCell {
+class VKServicesTableViewCell: UITableViewCell {
 
      let iconImageView: UIImageView = {
         let iconImageView = UIImageView()
@@ -42,6 +42,12 @@ class CustomTableViewCell: UITableViewCell {
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    func configure(with data: Service) {
+        titleLabel.text = data.name
+        subtitleLabel.text = data.description
+        iconImageView.setCustomImage(data.icon_url)
     }
 
     private func setupLayout() {

@@ -9,23 +9,31 @@
 /* Begin PBXBuildFile section */
 		04E1DC98288006C3001DA970 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1DC97288006C3001DA970 /* AppDelegate.swift */; };
 		04E1DC9A288006C3001DA970 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1DC99288006C3001DA970 /* SceneDelegate.swift */; };
-		04E1DC9C288006C3001DA970 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1DC9B288006C3001DA970 /* ViewController.swift */; };
+		04E1DC9C288006C3001DA970 /* VKServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1DC9B288006C3001DA970 /* VKServicesViewController.swift */; };
 		04E1DCA1288006C7001DA970 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E1DCA0288006C7001DA970 /* Assets.xcassets */; };
 		04E1DCA4288006C7001DA970 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E1DCA2288006C7001DA970 /* LaunchScreen.storyboard */; };
-		04E1DCAC2880087F001DA970 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1DCAB2880087F001DA970 /* CustomTableViewCell.swift */; };
+		04E1DCAC2880087F001DA970 /* VKServicesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1DCAB2880087F001DA970 /* VKServicesTableViewCell.swift */; };
 		04E1DCAE288008BD001DA970 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1DCAD288008BD001DA970 /* DataModel.swift */; };
+		04E1DCB628805760001DA970 /* VKServicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1DCB528805760001DA970 /* VKServicesAssembly.swift */; };
+		04E1DCB8288058AF001DA970 /* VKServicesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1DCB7288058AF001DA970 /* VKServicesPresenter.swift */; };
+		04E1DCBA2880591C001DA970 /* VKServicesViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1DCB92880591C001DA970 /* VKServicesViewInput.swift */; };
+		04E1DCBC28805C5E001DA970 /* VKServicesViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1DCBB28805C5E001DA970 /* VKServicesViewOutput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		04E1DC94288006C3001DA970 /* VKServicesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKServicesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E1DC97288006C3001DA970 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04E1DC99288006C3001DA970 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		04E1DC9B288006C3001DA970 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04E1DC9B288006C3001DA970 /* VKServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKServicesViewController.swift; sourceTree = "<group>"; };
 		04E1DCA0288006C7001DA970 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04E1DCA3288006C7001DA970 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04E1DCA5288006C7001DA970 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04E1DCAB2880087F001DA970 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		04E1DCAB2880087F001DA970 /* VKServicesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKServicesTableViewCell.swift; sourceTree = "<group>"; };
 		04E1DCAD288008BD001DA970 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		04E1DCB528805760001DA970 /* VKServicesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKServicesAssembly.swift; sourceTree = "<group>"; };
+		04E1DCB7288058AF001DA970 /* VKServicesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKServicesPresenter.swift; sourceTree = "<group>"; };
+		04E1DCB92880591C001DA970 /* VKServicesViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKServicesViewInput.swift; sourceTree = "<group>"; };
+		04E1DCBB28805C5E001DA970 /* VKServicesViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKServicesViewOutput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +66,52 @@
 		04E1DC96288006C3001DA970 /* VKServicesApp */ = {
 			isa = PBXGroup;
 			children = (
+				04E1DCB42880545C001DA970 /* App */,
+				04E1DCB328805410001DA970 /* Models */,
+				04E1DCB1288053DB001DA970 /* Views */,
+				04E1DCB2288053E9001DA970 /* Presenters */,
+			);
+			path = VKServicesApp;
+			sourceTree = "<group>";
+		};
+		04E1DCB1288053DB001DA970 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				04E1DCAB2880087F001DA970 /* VKServicesTableViewCell.swift */,
+				04E1DC9B288006C3001DA970 /* VKServicesViewController.swift */,
+				04E1DCB528805760001DA970 /* VKServicesAssembly.swift */,
+				04E1DCB92880591C001DA970 /* VKServicesViewInput.swift */,
+				04E1DCBB28805C5E001DA970 /* VKServicesViewOutput.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		04E1DCB2288053E9001DA970 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				04E1DCB7288058AF001DA970 /* VKServicesPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		04E1DCB328805410001DA970 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04E1DCAD288008BD001DA970 /* DataModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		04E1DCB42880545C001DA970 /* App */ = {
+			isa = PBXGroup;
+			children = (
 				04E1DC97288006C3001DA970 /* AppDelegate.swift */,
 				04E1DC99288006C3001DA970 /* SceneDelegate.swift */,
-				04E1DC9B288006C3001DA970 /* ViewController.swift */,
-				04E1DCAB2880087F001DA970 /* CustomTableViewCell.swift */,
-				04E1DCAD288008BD001DA970 /* DataModel.swift */,
 				04E1DCA0288006C7001DA970 /* Assets.xcassets */,
 				04E1DCA2288006C7001DA970 /* LaunchScreen.storyboard */,
 				04E1DCA5288006C7001DA970 /* Info.plist */,
 			);
-			path = VKServicesApp;
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,10 +184,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E1DCBA2880591C001DA970 /* VKServicesViewInput.swift in Sources */,
+				04E1DCB628805760001DA970 /* VKServicesAssembly.swift in Sources */,
+				04E1DCB8288058AF001DA970 /* VKServicesPresenter.swift in Sources */,
 				04E1DCAE288008BD001DA970 /* DataModel.swift in Sources */,
-				04E1DC9C288006C3001DA970 /* ViewController.swift in Sources */,
+				04E1DC9C288006C3001DA970 /* VKServicesViewController.swift in Sources */,
+				04E1DCBC28805C5E001DA970 /* VKServicesViewOutput.swift in Sources */,
 				04E1DC98288006C3001DA970 /* AppDelegate.swift in Sources */,
-				04E1DCAC2880087F001DA970 /* CustomTableViewCell.swift in Sources */,
+				04E1DCAC2880087F001DA970 /* VKServicesTableViewCell.swift in Sources */,
 				04E1DC9A288006C3001DA970 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  DataModel.swift
+//  VKServicesDataResponse.swift
 //  VKServicesApp
 //
 //  Created by mac on 14.07.2022.
@@ -7,16 +7,16 @@
 
 import Foundation
 
-struct Object: Codable {
+struct VKServicesDataResponse: Codable {
     var body: Body
     var status: Int
 }
 
 struct Body: Codable {
-    var services: [Services]
+    var services: [Service]
 }
 
-struct Services: Codable {
+struct Service: Codable {
     var name: String
     var description: String
     var link: URL
