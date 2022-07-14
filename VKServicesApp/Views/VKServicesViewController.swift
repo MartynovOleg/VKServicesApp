@@ -39,7 +39,11 @@ extension VKServicesViewController: UITableViewDelegate {
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        UIApplication.shared.openURL(serviceData[indexPath.row].link)
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(serviceData[indexPath.row].link, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(serviceData[indexPath.row].link)
+        }
     }
 }
 
