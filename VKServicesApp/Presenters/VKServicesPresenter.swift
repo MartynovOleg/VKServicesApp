@@ -17,7 +17,7 @@ class VKServicesPresenter {
         guard let url = URL(string: "https://publicstorage.hb.bizmrg.com/sirius/result.json") else {
             return
         }
-        let dataTask = session.dataTask(with: url) { data, response, error in
+        let _ = session.dataTask(with: url) { data, response, error in
             do {
                 let jsonData = try Data(contentsOf: url)
                 let result = try JSONDecoder().decode(VKServicesDataResponse.self, from: jsonData)
