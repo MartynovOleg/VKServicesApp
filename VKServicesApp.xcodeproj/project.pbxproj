@@ -13,7 +13,7 @@
 		04E1DCA1288006C7001DA970 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E1DCA0288006C7001DA970 /* Assets.xcassets */; };
 		04E1DCA4288006C7001DA970 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E1DCA2288006C7001DA970 /* LaunchScreen.storyboard */; };
 		04E1DCAC2880087F001DA970 /* VKServicesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1DCAB2880087F001DA970 /* VKServicesTableViewCell.swift */; };
-		04E1DCAE288008BD001DA970 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1DCAD288008BD001DA970 /* DataModel.swift */; };
+		04E1DCAE288008BD001DA970 /* VKServicesDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1DCAD288008BD001DA970 /* VKServicesDataResponse.swift */; };
 		04E1DCB628805760001DA970 /* VKServicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1DCB528805760001DA970 /* VKServicesAssembly.swift */; };
 		04E1DCB8288058AF001DA970 /* VKServicesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1DCB7288058AF001DA970 /* VKServicesPresenter.swift */; };
 		04E1DCBA2880591C001DA970 /* VKServicesViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1DCB92880591C001DA970 /* VKServicesViewInput.swift */; };
@@ -29,7 +29,7 @@
 		04E1DCA3288006C7001DA970 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04E1DCA5288006C7001DA970 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04E1DCAB2880087F001DA970 /* VKServicesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKServicesTableViewCell.swift; sourceTree = "<group>"; };
-		04E1DCAD288008BD001DA970 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		04E1DCAD288008BD001DA970 /* VKServicesDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKServicesDataResponse.swift; sourceTree = "<group>"; };
 		04E1DCB528805760001DA970 /* VKServicesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKServicesAssembly.swift; sourceTree = "<group>"; };
 		04E1DCB7288058AF001DA970 /* VKServicesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKServicesPresenter.swift; sourceTree = "<group>"; };
 		04E1DCB92880591C001DA970 /* VKServicesViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKServicesViewInput.swift; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 		04E1DCB328805410001DA970 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				04E1DCAD288008BD001DA970 /* DataModel.swift */,
+				04E1DCAD288008BD001DA970 /* VKServicesDataResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -187,7 +187,7 @@
 				04E1DCBA2880591C001DA970 /* VKServicesViewInput.swift in Sources */,
 				04E1DCB628805760001DA970 /* VKServicesAssembly.swift in Sources */,
 				04E1DCB8288058AF001DA970 /* VKServicesPresenter.swift in Sources */,
-				04E1DCAE288008BD001DA970 /* DataModel.swift in Sources */,
+				04E1DCAE288008BD001DA970 /* VKServicesDataResponse.swift in Sources */,
 				04E1DC9C288006C3001DA970 /* VKServicesViewController.swift in Sources */,
 				04E1DCBC28805C5E001DA970 /* VKServicesViewOutput.swift in Sources */,
 				04E1DC98288006C3001DA970 /* AppDelegate.swift in Sources */,

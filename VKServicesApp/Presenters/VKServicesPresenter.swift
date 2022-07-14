@@ -21,7 +21,6 @@ class VKServicesPresenter {
             do {
                 let jsonData = try Data(contentsOf: url)
                 let result = try JSONDecoder().decode(VKServicesDataResponse.self, from: jsonData)
-                print (result)
                 DispatchQueue.main.async {
                     self.view?.setupData(with: result.body.services)
                 }
